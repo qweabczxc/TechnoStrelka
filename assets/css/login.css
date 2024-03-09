@@ -1,0 +1,93 @@
+@font-face {
+    font-family: Jockey One;
+    src: url(../fonts/JockeyOne-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #fff;
+}
+input{
+    font-family: Jockey One;
+    font-size: 22px;
+}
+.general_block{
+    width: 583px;
+    height: 620px;
+    margin: 229px 0 0 637px;
+}
+
+.general_block_txt{
+    font-family: Jockey One;
+    font-weight: 400;
+    font-size: 30px;
+    margin-left: 252px;
+}
+
+#login{
+    margin-top: 38px;
+    width: 581px;
+    height: 68px;
+    border: none;
+    border-radius: 50px;
+    fill: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    padding-left: 27px;
+    padding-top: 5px;
+}
+
+#login::placeholder{
+    font-family: Jockey One;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+#password{
+    margin-top: 23px;
+    width: 581px;
+    height: 68px;
+    border: none;
+    border-radius: 50px;
+    fill: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    padding-left: 27px;
+    padding-top: 5px;
+}
+
+#password::placeholder{
+    font-family: Jockey One;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.general_block_btn{
+    margin-top: 23px;
+    border-radius: 50px;
+    background-color: #000;
+    border: none;
+    width: 581px;
+    height: 68px;
+    margin-bottom: 81px;
+}
+
+.general_block_btn_txt{
+    font-family: Jockey One;
+    color: #fff;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+.general_block_reg{
+    font-family: Jockey One;
+    font-weight: 400;
+    font-size: 20px;
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    margin-left: 266px;
+}

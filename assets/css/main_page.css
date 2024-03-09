@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+#kolosook{
+    font-size: 32px;
+    font-family: "Kranky", serif;
+    align-self: center;
+}
+#header_div_for_search{
+    display: flex;
+    align-items: center;
+}
+#header_input{
+    height: 60px;
+    border-radius: 40px;
+    border: none;
+    background-color: #F4F4F4;
+    width: 1150px;
+    margin-left: 10%;
+    font-family: "Jockey One", sans-serif;
+    padding-left: 65px;
+    font-size: 32px;
+}
+#header_input::placeholder{
+
+    margin-top: 20px;
+    color: #DCDCDC;
+    font-size: 32px;
+    
+}
+#header_input_img{
+    position: absolute;
+    margin-left: 140px;
+}
+#button_img{
+    display: flex;
+    position: absolute;
+    right: 20px;
+}
+button{
+    width: 170px; height: 66px;
+    background-color: black;
+    color: white;
+    font-family: "Jockey One", sans-serif;
+    font-size: 32px;
+    border-radius: 500px;
+    margin-left: 52px;
+}
+#header_img{
+    width: 75px; height: 75px;
+    border-radius: 500px;
+    margin-left: 52px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    font-family: "Jockey One", sans-serif;
+}
+.main_img{
+    width: 75px; height: 75px;
+    border-radius: 500px;
+    margin: 42px 0 0 46px;
+}
+#main_div_name{
+    display: flex;
+
+}
+#main_full_name{
+    font-size: 64px;
+    margin: 46px 25px 0 25px;
+    
+}
+#main_id{
+    font-size: 24px;
+    align-self: flex-end;
+    margin-top: 88px;
+    opacity: 50%;
+}
+.main_imgs{
+    width: 420px; height: 280px;
+    border-radius: 25px;
+    margin: 15px 15px 0 25px;
+}
+.main_imgs:hover{
+    opacity: 50%;
+}
