@@ -32,7 +32,7 @@ session_start();
     </header>
     <main>
     <div id="div_drop_files">
-    <form action="add_files.php" method="POST" enctype="multipart/form-data">
+    <form action="/vendor/add_files.php" method="POST" enctype="multipart/form-data">
         <label for="text_drop_files_center">
             <img src="placeholder_image.jpg" id="preview_image" style="display: none;">
         </label>

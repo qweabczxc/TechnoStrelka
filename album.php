@@ -1,5 +1,6 @@
 <?php
 session_start();
+$connect = mysqli_connect('26.15.252.141', 'eshkere', 'eshkere', 'test');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,29 +22,83 @@ session_start();
             <input type="text" id="header_input" placeholder="Search">
         </div>
         <div id="button_img">
-            <button>Create</button>
-            <img src="<?= $_SESSION['user']['avatar'] ?>" alt="Изображение" id="header_img">
+        <?php
+            if ($_SESSION['user']) {
+                ?>
+                <button onclick="window.location.href='adding_files.php'">Create</button>
+                <img src="<?= $_SESSION['user']['avatar'] ?>" alt="Изображение" id="header_img" onclick="window.location.href='profile.php'">
+                <?php
+            } else {
+                ?>
+                <button onclick="window.location.href='registration.php'">Sign up/in</button>
+                <?php
+            }
+        ?>
         </div>
     </header>
     <main>
         <div class="polz">
-            <img class="polz-img" src="img/зангецу 59.png">
-            <p class="polz-text">zangetsu</p>
-            <p class="polz-text-s">author: qweabc</p>
+        <?php
+        if(isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $sql = "SELECT avatar FROM users WHERE id = $id";
+            $result = $connect->query($sql);
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $avatarData = $row['avatar'];
+                
+                echo '<img src="' . $avatarData . '" alt="Аватарка"' . '" class="polz-img">';
+
+                // echo '<img src="data:image/jpeg;base64,' . base64_encode($avatarData) . '" class="polz-img">';
+            } 
+        }
+        else{
+            echo '<img src="' . $_SESSION['user']['avatar'] . '" class="polz-img">';
+
+        }
+        ?>
+        <?php
+        if(isset($_GET['id'])) {
+            $id = $_GET['id'];
+        }
+        else{
+            $id = $_SESSION['user']['id'];
+        }
+        $sql = "SELECT name FROM album WHERE user_id = $id";
+        $result = $connect->query($sql);
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $nameData = $row['name'];
+            
+            echo '<p class="polz-text">' . $nameData . '</p>';
+
+        }
+        ?>
+        <?php
+            if(isset($_GET['id'])) {
+                $id = $_GET['id'];
+            }
+            else{
+                $id = $_SESSION['user']['id'];
+            }
+            $sql = "SELECT full_name FROM users WHERE id = $id";
+            $result = $connect->query($sql);
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $nameData = $row['full_name'];
+                
+                echo '<p class="polz-text-s"> author: ' . $nameData . '</p>';
+
+            }
+        ?>
             <p class="hfo">hide from others</p>
             <input type="checkbox" id="main_checkbox">
         </div>
         <div class="zan">
-            <img class="zan-s" src="img/зангецу 52.png">
-            <img class="zan-s" src="img/зангецу 52.png">
-            <img class="zan-s" src="img/зангецу 52.png">
-            <img class="zan-s" src="img/зангецу 52.png">
-            <img class="zan-s" src="img/зангецу 52.png">
-            <div class="zan-d-p">
-                <div class="create-st"></div>
-                <div class="create-stn"></div>
-                <p class="create-text">add new file</p>
-            </div>
+            <?php
+            require "vendor/check_user.php";
+            ?>
+
         </div>
 
     </main>
