@@ -1,5 +1,5 @@
 <?php
-$connect = mysqli_connect('26.15.252.141', 'eshkere', 'eshkere', 'test');
+
 session_start();
 if(isset($_GET['id'])) {
     $id = $_GET['id'];

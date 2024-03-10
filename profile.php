@@ -1,5 +1,6 @@
 <?php
 session_start();
+$connect = mysqli_connect('26.15.252.141', 'eshkere', 'eshkere', 'test');
 ?>
 
 
@@ -39,15 +40,30 @@ session_start();
         </div>
     </header>
     <main>
-        <img src="uploads/1709446977эдгар.jpg" id="profile_avatar">
+        <?php
+        if(isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $sql = "SELECT avatar FROM users WHERE id = $id";
+            $result = $connect->query($sql);
+            if ($result->num_rows > 0) {
+                $row = $result->fetch_assoc();
+                $avatarData = $row['avatar'];
+                
+                echo '<img src="' . $avatarData . '" alt="Аватарка"' . '" id="profile_avatar">';
+
+                // echo '<img src="data:image/jpeg;base64,' . base64_encode($avatarData) . '" alt="Аватарка">';
+            } 
+        }
+        else{
+            echo '<img src="' . $_SESSION['user']['avatar'] . '" id="profile_avatar">';
+
+        }
+        ?>
+        
         <p id="profile_nick">qweabc</p>
-        <button id="main_first_button">Share profile</button>
+        <button id="main_first_button">Albums</button>
         <button id="main_second_button">Edit profile</button>
         <div id="profile_all_files">
-            <figure>
-                <img src="uploads/albums.png" id="main_files_img">
-                <figcaption>albums</figcaption>
-            </figure>
             <figure>
                 <?php
                 require "vendor/check_user.php";

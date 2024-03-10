@@ -72,36 +72,33 @@ main{
     margin-left: 320px; margin-top: 40px;
 }
 #text_drop_files_center{
-
-    
-    background-color: #f0f0f0; /* Пример цвета фона */
+    width: 430px; height: 604px;
+    background-color: #D9D9D9;
+    border-radius: 50px;
+    opacity: 0;
     color: #333; /* Пример цвета текста */
     padding: 10px; /* Пример отступов */
     border: 1px solid #ccc; /* Пример границы */
-    border-radius: 5px; /* Пример скругления углов */
+}
+#text_drop_files{
+    
+    margin-top: -480px;
+    margin-left: 130px;
+    font-size: 40px;
+    text-align: center;
+    width: 223px;
 }
 #text_drop_files_down{
     text-align: center;
     font-size: 30px;
     opacity: 50%;
-    margin-top: 230px;
+    margin-top: 300px;
 }
 #div_file_information{
     margin-left: 130px; margin-top: 30px;
     
 }
-#main_input_description{
-    display: flex;
-    flex-direction: column;
-    width: 581px; height: 120px;
-    border-radius: 50px;
-    margin-top: 35px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    border: none;
-    font-size: 20px;
-    font-family: "Jockey One", sans-serif;
-    padding-left: 30px;
-}
+
 #main_input{
     display: flex;
     flex-direction: column;
@@ -129,4 +126,14 @@ main{
 #button_file_information_end{
     margin-top: 20px;
     margin-left: 100px;
+}
+#file_input {
+    display: none; /* Скрыть инпут файлового поля */
+}
+
+#preview_image {
+    width: 460px; /* Ширина предпросмотра изображения */
+    height: 630px; /* Высота предпросмотра изображения */
+    cursor: pointer; /* Изменить курсор при наведении */
+    border-radius: 50px;
 }
