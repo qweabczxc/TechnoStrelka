@@ -22,7 +22,7 @@
         <input type="password" name="password" id="password" placeholder="Password" required>
         <input type="password" name="password_confirm" id="password-confirm" placeholder="Confirm password">
         <button class="general_block_btn"><p class="general_block_btn_txt">Sign up</p></button>
-        <a href="/" class="general_block_log">Sign in</a>
+        <a href="login.php" class="general_block_log">Sign in</a>
         <?php
             if ($_SESSION['message']) {
                 echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
@@ -50,10 +50,4 @@
         <p>
             У вас уже есть аккаунт? - <a href="/">авторизируйтесь</a>!
         </p>
-        <?php
-            if ($_SESSION['message']) {
-                echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
-            }
-            unset($_SESSION['message']);
-        ?>
     </form> -->

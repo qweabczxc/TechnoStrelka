@@ -19,18 +19,18 @@
         ];
         
         $_SESSION['files'] = [
-            "id" => $user['id'],
-            "full_name" => $user['full_name'],
-            "avatar" => $user['avatar'],
-            "email" => $user['email']
+            "user_id" => $user['id'],
+            "name" => $user['name'],
+            "avatar" => $user['avatar']
+
         ];
 
 
-        header('Location: ../main_page.php');
+        header('Location: ../index.php');
 
     } else {
         $_SESSION['message'] = 'Не верный логин или пароль';
-        header('Location: ../index.php');
+        header('Location: ../login.php');
     }
     ?>
 
