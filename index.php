@@ -1,5 +1,6 @@
 <?php
 session_start();
+require "vendor/connect.php";
 ?>
 
 <!DOCTYPE html>
@@ -11,12 +12,14 @@ session_start();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Kranky&display=swap" rel="stylesheet">
-    <title>main</title>
+    <title>Kolosook</title>
 </head>
 <body>
     <header>
-        <img src="uploads/logo1.png" id="logo">
-        <p id="kolosook">kolosook</p>
+        <a href="index.php" class="ref_mainpage">
+            <img src="uploads/logo1.png" id="logo">
+            <p id="kolosook">kolosook</p>
+        </a>
         <div id="header_div_for_search">
             <img src="uploads/header_input.png" id="header_input_img">
             <input type="text" id="header_input" placeholder="Search">
@@ -39,6 +42,12 @@ session_start();
     </header>
 
     <main>
+    <?php
+
+?>
+            <?php
+            require 'vendor/random.php';
+            ?>
     <div id="main_div_name_with_imgs">
             <div id="main_div_name">
                 <img src="<?= $_SESSION['random']['avatar'] ?>" class="main_img" onclick="redirectToPageWithId(<?php echo $_SESSION['random']['id']; ?>)">
@@ -46,16 +55,15 @@ session_start();
                 <p id="main_id"><?= '@' . $_SESSION['random']['id'] ?></p> 
             </div>
             <div>
-            <img src="<?= $_SESSION['random']['avatar'] ?>" class="main1_img main_imgs">
-            <img src="<?= $_SESSION['random']['avatar'] ?>" class="main2_img main_imgs">
-            <img src="<?= $_SESSION['random']['avatar'] ?>" class="main3_img main_imgs">
-            <img src="<?= $_SESSION['random']['avatar'] ?>" class="main4_img main_imgs">
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][0] ?>" id="main_files_img">
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][1] ?>" id="main_files_img">
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][2] ?>" id="main_files_img">
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][3] ?>" id="main_files_img">
             </div>
         </div>
-<?php
-require 'vendor/random.php';
-?>
-
+            <?php
+            require 'vendor/random.php';
+            ?>        
         <div id="main_div_name_with_imgs">
             <div id="main_div_name">
                 <img src="<?= $_SESSION['random']['avatar'] ?>" class="main_img" onclick="redirectToPageWithId(<?php echo $_SESSION['random']['id']; ?>)">
@@ -63,16 +71,15 @@ require 'vendor/random.php';
                 <p id="main_id"><?= '@' . $_SESSION['random']['id'] ?></p> 
             </div>
             <div>
-            <img src="<?= $_SESSION['random']['avatar'] ?>" class="main1_img main_imgs">
-            <img src="<?= $_SESSION['random']['avatar'] ?>" class="main2_img main_imgs">
-            <img src="<?= $_SESSION['random']['avatar'] ?>" class="main3_img main_imgs">
-            <img src="<?= $_SESSION['random']['avatar'] ?>" class="main4_img main_imgs">
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][3] ?>" id="main_files_img">
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][0] ?>" id="main_files_img">
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][2] ?>" id="main_files_img">
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][1] ?>" id="main_files_img">
             </div>
         </div>
-        <?php
-require 'vendor/random.php';
-?>
-
+            <?php
+            require 'vendor/random.php';
+            ?>        
         <div id="main_div_name_with_imgs">
             <div id="main_div_name">
                 <img src="<?= $_SESSION['random']['avatar'] ?>" class="main_img" onclick="redirectToPageWithId(<?php echo $_SESSION['random']['id']; ?>)">
@@ -80,12 +87,14 @@ require 'vendor/random.php';
                 <p id="main_id"><?= '@' . $_SESSION['random']['id'] ?></p> 
             </div>
             <div>
-                <img src="<?= $_SESSION['random']['avatar'] ?>" class="main1_img main_imgs">
-                <img src="<?= $_SESSION['random']['avatar'] ?>" class="main2_img main_imgs">
-                <img src="<?= $_SESSION['random']['avatar'] ?>" class="main3_img main_imgs">
-                <img src="<?= $_SESSION['random']['avatar'] ?>" class="main4_img main_imgs">
+
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][0] ?>" id="main_files_img">
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][2] ?>" id="main_files_img">
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][1] ?>" id="main_files_img">
+            <img src="data:image/jpeg;base64,<?= $_SESSION['photos_for_main_page'][3] ?>" id="main_files_img">
             </div>
         </div>
+
     </main>
 
 </body>

@@ -10,12 +10,14 @@ session_start();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Kranky&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Kolosook</title>
 </head>
 <body>
     <header>
-        <img src="uploads/logo1.png" id="logo">
-        <p id="kolosook">kolosook</p>
+        <a href="index.php" class="ref_mainpage">
+            <img src="uploads/logo1.png" id="logo">
+            <p id="kolosook">kolosook</p>
+        </a>
         <div id="header_div_for_search">
             <img src="uploads/header_input.png" id="header_input_img">
             <input type="text" id="header_input" placeholder="Search">
@@ -32,7 +34,7 @@ session_start();
     </header>
     <main>
     <div id="div_drop_files">
-    <form action="/vendor/add_files.php" method="POST" enctype="multipart/form-data">
+    <form action="vendor/add_files.php" method="POST" enctype="multipart/form-data">
         <label for="text_drop_files_center">
             <img src="placeholder_image.jpg" id="preview_image" style="display: none;">
         </label>

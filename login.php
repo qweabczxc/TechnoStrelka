@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+require "vendor/connect.php";
 if ($_SESSION['user']) {
     header('Location: index.php');
 }
@@ -20,8 +20,9 @@ if ($_SESSION['user']) {
         <input type="text" name="login" id="login" placeholder="Login">
         <input type="password" name="password" id="password" placeholder="Password">
         <button class="general_block_btn"><p class="general_block_btn_txt">Sign in</p></button>
-        <a href="/registration.php" class="general_block_reg">Sign up</a>
+        <a href="registration.php" class="general_block_reg">Sign up</a>
         <?php
+        
             if ($_SESSION['message']) {
                 echo '<p class="msg"> ' . $_SESSION['message'] . ' </p>';
             }

@@ -7,6 +7,13 @@ header{
     align-items: center;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
 }
+
+.ref_mainpage{
+    text-decoration: 0;
+    color: black;
+    display: flex;
+}
+
 #kolosook{
     font-size: 32px;
     font-family: "Kranky", serif;
@@ -110,4 +117,175 @@ main{
 #button_file_information_end{
     margin-top: 20px;
     margin-left: 440px;
+}
+@media (max-width:820px) {
+    /***************************/
+    #kolosook {
+        font-size: 22px;
+        font-family: "Kranky", serif;
+        align-self: center;
+        margin-left: -25px;
+    }
+    button {
+        width: 110px;
+        height: 66px;
+        background-color: black;
+        color: white;
+        font-family: "Jockey One", sans-serif;
+        font-size: 24px;
+        border-radius: 500px;
+        margin-left: 244px;
+    }
+    #header_input_img {
+        position: absolute;
+        margin-left: 175px;
+    }
+    #header_input {
+        height: 60px;
+        border-radius: 40px;
+        border: none;
+        background-color: #F4F4F4;
+        width: 259px;
+        margin-left: 160px;
+        font-family: "Jockey One", sans-serif;
+        padding-left: 65px;
+        font-size: 32px;
+    }
+    .avatar{
+        visibility: hidden;
+    }   
+    /***************************/
+    main {
+        width: 800px;
+        height: 720px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 50px;
+        margin-left: 10px;
+        margin-top: 50px;
+        display: flex;
+    }
+    #div_drop_files {
+        width: 485px;
+        height: 630px;
+        background-color: #D9D9D9;
+        border-radius: 50px;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+    #main_input {
+        display: flex;
+        flex-direction: column;
+        width: 322px;
+        height: 66px;
+        border-radius: 50px;
+        margin-top: 35px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border: none;
+        font-size: 20px;
+        font-family: "Jockey One", sans-serif;
+        padding-left: 30px;
+    }
+    #text_drop_files_center {
+        text-align: center; 
+        margin-left: 66px;
+        font-size: 40px;
+        width: 223px;
+        margin-top: 220px;
+        margin-right: 65px;
+    }
+    #div_file_information {
+        margin-left: 24px;
+        margin-right: 14px;
+        margin-top: 30px;
+    }
+    #button_file_information_end {
+        margin-top: 20px;
+        margin-left: 246px;
+    }
+}
+@media (max-width: 390px){
+    /***************************/
+    #kolosook {
+        font-size: 22px;
+        font-family: "Kranky", serif;
+        align-self: center;
+        margin-left: -25px;
+        visibility: hidden;
+    }
+    .logo_k {
+        width: 125px;
+        height: 121px;
+        margin-left: -39px;
+    }
+    .create{
+        visibility: hidden;
+    }
+    .avatar{
+        visibility: hidden;
+    }
+    .signin {
+        line-height: 25px;
+    }
+    button {
+        width: 100px;
+        height: 66px;
+        background-color: black;
+        color: white;
+        font-family: "Jockey One", sans-serif;
+        font-size: 21px;
+        border-radius: 500px;
+        margin-right: -15px;
+    }
+    #header_input {
+        height: 60px;
+        border-radius: 40px;
+        border: none;
+        background-color: #F4F4F4;
+        width: 156px;
+        margin-left: -91px;
+        font-family: "Jockey One", sans-serif;
+        padding-left: 65px;
+        font-size: 32px;
+    }
+    #header_input_img {
+        position: absolute;
+        margin-left: -78px;
+    }
+    /***************************/
+    main {
+        width: 370px;
+        height: 720px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        border-radius: 50px;
+        margin-left: 10px;
+        margin-top: 40px;
+        display: flex;
+    }
+    #div_drop_files {
+        width: 359px;
+        height: 340px;
+        background-color: #D9D9D9;
+        border-radius: 50px;
+        margin-left: 9px;
+        margin-top: 11px;
+    }
+    #text_drop_files_center {
+        text-align: center;
+        margin-left: 66px;
+        font-size: 40px;
+        width: 223px;
+        margin-top: 78px;
+        margin-right: 65px;
+    }
+    #text_drop_files_down {
+        text-align: center;
+        font-size: 30px;
+        opacity: 50%;
+        margin-top: 79px;
+    }
+    #div_file_information {
+        margin-left: -354px;
+        margin-right: 14px;
+        margin-top: 349px;
+    }
 }

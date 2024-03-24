@@ -14,8 +14,10 @@ session_start();
 </head>
 <body>
     <header>
-        <img src="uploads/logo1.png" id="logo">
-        <p id="kolosook">kolosook</p>
+        <a href="index.php" class="ref_mainpage">
+            <img src="uploads/logo1.png" id="logo">
+            <p id="kolosook">kolosook</p>
+        </a>
         <div id="header_div_for_search">
             <img src="uploads/header_input.png" id="header_input_img">
             <input type="text" id="header_input" placeholder="Search">
